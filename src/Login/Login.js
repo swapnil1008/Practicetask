@@ -15,11 +15,12 @@ const Login = (props) => {
       if (user.name === username && user.password === password) {
         props.signIn(user.role);
         history.push("/Home");
+        return true;
       } else {
         seterror("invalid username and password");
+        return false;
       }
     });
-    return "";
   };
 
   return (
