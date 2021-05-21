@@ -11,7 +11,7 @@ const Login = (props) => {
   const [error, seterror] = useState("");
   const validateuser = async () => {
     const response = await validate.get();
-    return response.data.map((user) => {
+    response.data.map((user) => {
       if (user.name === username && user.password === password) {
         props.signIn(user.role);
         history.push("/Home");
@@ -19,6 +19,7 @@ const Login = (props) => {
         seterror("invalid username and password");
       }
     });
+    return "";
   };
 
   return (

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import loginreducer from "./loginreducer";
+import { loginreducer } from "./loginreducer";
 
 const spacexdataSchemas = () => {
   return [

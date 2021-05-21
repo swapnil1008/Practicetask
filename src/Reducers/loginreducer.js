@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   isSignedIn: false,
   role: "",
 };
-export default (state = INITIAL_STATE, action) => {
+export const loginreducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "SIGN_IN":
       return {
